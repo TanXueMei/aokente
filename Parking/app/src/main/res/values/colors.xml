@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00000000</color>
+
+    <!--金额红色 FF221E-->
+    <color name="money_red">#FF221E</color>
+    <!--背景-->
+    <color name="backdrop">#F5F5F5</color>
+    <!-- 白色-->
+    <color name="white">#FFFFFF</color>
+    <!--黑色-->
+    <color name="black">#000000</color>
+    <!--灰色 EEEEEE-->
+    <color name="gray">#EEEEEE</color>
+    <!--选中时的颜色-->
+    <color name="seletorYellow">#ff6c0a</color>
+    <item name="gray_holo_dark" type="color">#ff464646</item>
+    <color name="textColor">#606062</color>
+    <!--标题颜色  -->
+    <color name="titleColor">#367eb0</color>
+    <!--车辆管理 车牌颜色-->
+    <color name="cartNumColor">#2274C6</color>
+
+    <!--字体颜色-->
+    <color name="color_text_80">#cc000000</color>
+    <color name="color_text_60">#99000000</color>
+    <color name="color_text_40">#66000000</color>
+    <color name="color_text_20">#33000000</color>
+    <!--服务与反馈编辑框-->
+    <color name="edittext_stroke">#C1C1C1</color>
+    <color name="edittext_solid">#EAEAEA</color>
+    <color name="edittext_selected">#FFB90F</color>
+
+    <!--上拉加载，下拉刷新-->
+    <color name="google_red">#d62d20</color>
+    <color name="google_blue">#0057e7</color>
+    <color name="google_green">#008744</color>
+    <color name="google_yellow">#ffa700</color>
+
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aokente="http://schemas.android.com/apk/res-auto"
+    xmlns:zc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhichen.parking.widget.GlobalTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        aokente:global_back="true"
+        aokente:global_title="@string/change_logpsw">
+    </com.zhichen.parking.widget.GlobalTitleLayout>
+
+
+    <com.zhichen.parking.widget.IconEditTextLayout
+        android:id="@+id/modify_login_password_1_et"
+        style="@style/IconEditTextLayout"
+        zc:hint="请输入原登录密码"
+        zc:icon="@mipmap/icon_password"
+        android:layout_marginLeft="@dimen/gauge_20"
+        android:layout_marginRight="@dimen/gauge_20"
+        android:layout_marginTop="@dimen/gauge_10"
+        zc:password="true" />
+
+    <com.zhichen.parking.widget.IconEditTextLayout
+        android:id="@+id/modify_login_password_2_et"
+        style="@style/IconEditTextLayout"
+        android:layout_marginLeft="@dimen/gauge_20"
+        android:layout_marginRight="@dimen/gauge_20"
+        android:layout_marginTop="@dimen/gauge_5"
+        zc:hint="请设置新的登录密码"
+        zc:icon="@mipmap/icon_password"
+        zc:password="true" />
+
+    <com.zhichen.parking.widget.IconEditTextLayout
+        android:id="@+id/modify_login_password_3_et"
+        style="@style/IconEditTextLayout"
+        android:layout_marginLeft="@dimen/gauge_20"
+        android:layout_marginRight="@dimen/gauge_20"
+        android:layout_marginTop="@dimen/gauge_5"
+        zc:hint="请再次输入新的登录密码"
+        zc:icon="@mipmap/icon_password"
+        zc:password="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gauge_20"
+        android:layout_marginLeft="@dimen/gauge_20"
+        android:layout_marginRight="@dimen/gauge_20"
+        android:text="@string/pswLimit"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_14" />
+
+    <Button
+        android:id="@+id/modify_login_submit_btn"
+        style="@style/long_item_btn"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/gauge_20"
+        android:layout_marginRight="@dimen/gauge_20"
+        android:text="@string/finish" />
+
+</LinearLayout>

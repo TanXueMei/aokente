@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/gauge_5" >
+
+    <Button
+        android:id="@+id/pay_car_no_edit_btn"
+        style="@style/BaseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/gauge_30"
+        android:layout_marginRight="@dimen/gauge_10"
+        android:spinnerMode="dialog"
+        android:text="选择优惠卷"
+        android:minWidth="@dimen/gauge_100" />
+
+    <TextView
+        android:id="@+id/check_no_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_text_blue"
+        android:paddingLeft="@dimen/gauge_4"
+        android:textSize="@dimen/text_18"
+        android:text="陕A83921" />
+
+</LinearLayout>

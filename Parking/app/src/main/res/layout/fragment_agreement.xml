@@ -1,0 +1,41 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aokente="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.zhichen.parking.widget.GlobalTitleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            aokente:global_back="true"
+            aokente:global_title="@string/agreedXieyi"></com.zhichen.parking.widget.GlobalTitleLayout>
+
+        <TextView
+            android:id="@+id/register_agreement_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agreement"
+            android:padding="@dimen/gauge_10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16" />
+
+        <TextView
+            android:id="@+id/register_agreement_company_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gauge_30"
+            android:padding="@dimen/gauge_10"
+            android:gravity="right"
+            android:text="深圳市奥肯特科技有限公司"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/gauge_10">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/gauge_5"
+        android:layout_marginTop="@dimen/gauge_10"
+        android:text="停车信息"
+        android:textColor="@color/color_text_60"
+        android:textSize="@dimen/text_16" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/lable_pay_2" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/gauge_5"
+        android:layout_marginTop="@dimen/gauge_10"
+        android:text="支付方式"
+        android:textColor="@color/color_text_60"
+        android:textSize="@dimen/text_16" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_bg"
+        android:padding="@dimen/gauge_5" >
+
+        <RadioButton
+            android:id="@+id/pay_account_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:enabled="true"
+            android:textSize="@dimen/text_16"
+            android:text="账户余额（余额：0元）" >
+        </RadioButton>
+
+        <Button
+            android:id="@+id/money_recharge_btn"
+            android:layout_width="wrap_content"
+            android:minWidth="@dimen/gauge_50"
+            android:layout_height="@dimen/gauge_30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_button"
+            android:text="充值"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/gauge_5"
+        android:layout_marginTop="@dimen/gauge_10"
+        android:text="请在支付完成后15分钟内离场，否则将产生新的费用"
+        android:textColor="@color/color_text_60"
+        android:textSize="@dimen/text_12" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/lable_pay_5" />
+
+</LinearLayout>

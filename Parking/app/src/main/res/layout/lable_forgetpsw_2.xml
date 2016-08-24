@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:zc="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.zhichen.parking.widget.IconEditTextLayout
+        android:id="@+id/register_password_1_et"
+        style="@style/IconEditTextLayout"
+        zc:hint="请设置登录密码"
+        zc:icon="@mipmap/icon_password"
+        zc:password="true" />
+
+    <com.zhichen.parking.widget.IconEditTextLayout
+        android:id="@+id/register_password_2_et"
+        style="@style/IconEditTextLayout"
+        zc:hint="请再次输入登录密码"
+        zc:icon="@mipmap/icon_password"
+        zc:password="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gauge_20"
+        android:text="@string/pswLimit"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_14" />
+
+    <Button
+        android:id="@+id/register_submit_btn"
+        style="@style/long_item_btn"
+        android:layout_marginTop="30dp"
+        android:text="@string/finish" />
+
+</LinearLayout>

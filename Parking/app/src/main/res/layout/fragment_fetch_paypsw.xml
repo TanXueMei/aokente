@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aokente="http://schemas.android.com/apk/res-auto"
+    xmlns:zc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhichen.parking.widget.GlobalTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        aokente:global_back="true"
+        aokente:global_title="@string/change_findpaypsw"/>
+
+    <RelativeLayout
+        android:id="@+id/fetch_pay_1_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/gauge_50"
+        android:visibility="visible"
+        android:padding="@dimen/gauge_20">
+
+
+        <com.zhichen.parking.widget.CountDownButton
+            android:id="@+id/count_down_btn"
+            android:layout_width="@dimen/gauge_120"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/gauge_20"
+            android:text="获取验证码"
+            android:textSize="@dimen/text_14" />
+
+        <com.zhichen.parking.widget.IconEditTextLayout
+            android:id="@+id/fetch_authcode_edit"
+            style="@style/IconEditTextLayout"
+            android:layout_marginTop="0dp"
+            android:layout_toLeftOf="@id/count_down_btn"
+            zc:hint="请输入验证码"
+            zc:icon="@mipmap/icon_auth_code" />
+
+        <Button
+            android:id="@+id/fetch_pay_next_btn"
+            style="@style/long_item_btn"
+            android:layout_below="@id/fetch_authcode_edit"
+            android:layout_marginTop="30dp"
+            android:text="下一步" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fetch_pay_2_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <com.zhichen.parking.widget.GlobalTitleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            aokente:global_back="true"
+            aokente:global_title="@string/change_findpaypsw"/>
+        <com.zhichen.parking.widget.IconEditTextLayout
+            android:id="@+id/fetch_pay_password_1_et"
+            style="@style/IconEditTextLayout"
+            android:layout_marginLeft="@dimen/gauge_20"
+            android:layout_marginRight="@dimen/gauge_20"
+            zc:hint="请设置新的密码"
+            zc:icon="@mipmap/icon_pay_password"
+            zc:password="true" />
+
+        <com.zhichen.parking.widget.IconEditTextLayout
+            android:id="@+id/fetch_pay_password_2_et"
+            style="@style/IconEditTextLayout"
+            android:layout_marginLeft="@dimen/gauge_20"
+            android:layout_marginRight="@dimen/gauge_20"
+            zc:hint="请再次输入新的密码"
+            zc:icon="@mipmap/icon_pay_password"
+            zc:password="true" />
+
+        <TextView
+            android:id="@+id/mi_ma_tishi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gauge_20"
+            android:paddingLeft="@dimen/gauge_20"
+            android:paddingRight="@dimen/gauge_20"
+            android:text="支付密码为六位纯数字"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14" />
+
+        <Button
+            android:id="@+id/fetch_pay_submit_btn"
+            style="@style/long_item_btn"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="@dimen/gauge_20"
+            android:layout_marginRight="@dimen/gauge_20"
+            android:text="@string/finish" />
+    </LinearLayout>
+
+</FrameLayout>

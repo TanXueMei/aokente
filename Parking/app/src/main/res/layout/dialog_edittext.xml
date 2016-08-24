@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+     >
+
+    <EditText
+        android:id="@+id/dialog_modify_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gauge_50"
+        android:background="@drawable/selector_edittext_bg"
+        android:paddingLeft="@dimen/gauge_5"
+        android:layout_margin="@dimen/gauge_10"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_18" />
+
+</LinearLayout>

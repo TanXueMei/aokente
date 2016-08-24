@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:zc="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.zhichen.parking.widget.IconEditTextLayout
+        android:id="@+id/register_phone_et"
+        style="@style/IconEditTextLayout"
+        zc:hint="@string/input_phone"
+        zc:icon="@mipmap/icon_phone" />
+
+    <com.zhichen.parking.widget.IconEditTextLayout
+        android:id="@+id/register_carno_et"
+        style="@style/IconEditTextLayout"
+        zc:hint="@string/input_car_no"
+        zc:icon="@mipmap/icon_car_number" />
+
+    <Button
+        android:id="@+id/register_fetchauth_btn"
+        style="@style/long_item_btn"
+        android:layout_marginTop="30dp"
+        android:text="@string/getcode" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/register_agree_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agreed"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/register_agreement_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agreedment"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/text_14" />
+    </LinearLayout>
+
+</LinearLayout>

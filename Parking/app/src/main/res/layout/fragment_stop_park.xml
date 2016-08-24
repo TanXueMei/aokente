@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zc="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+    <com.zhichen.parking.widget.GlobalTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        zc:global_back="true"
+        zc:global_title="@string/my_park">
+    </com.zhichen.parking.widget.GlobalTitleLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/gauge_10">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white_bg"
+            android:padding="@dimen/gauge_5" >
+            <TextView
+                android:id="@+id/onroad_berth_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/gauge_5"
+                android:text="请输入泊位编号"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_20" />
+            <com.zhichen.parking.library.gridpasswordview.GridPasswordView
+                android:id="@+id/onroad_berth_pswView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gauge_50"
+                android:layout_alignLeft="@id/onroad_berth_hint_tv"
+                android:layout_below="@id/onroad_berth_hint_tv"
+                android:layout_marginTop="@dimen/gauge_10"
+                zc:gridColor="#ffffff"
+                zc:lineColor="#2196F3"
+                zc:lineWidth="1dp"
+                zc:passwordLength="9"
+                zc:passwordType="textVisiblePassword"
+                zc:textColor="@color/black"
+                zc:textSize="@dimen/text_20" />
+
+            <Button
+                android:id="@+id/onroad_berth_ok_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gauge_50"
+                android:layout_below="@id/onroad_berth_pswView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/gauge_5"
+                android:layout_marginTop="@dimen/gauge_30"
+                android:background="@drawable/shape_button"
+                android:text="开始停车"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_20" />
+        </RelativeLayout>
+        <!--计时部分-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gauge_5"
+            android:background="@drawable/shape_white_bg"
+            android:padding="@dimen/gauge_5">
+            <TextView
+                android:id="@+id/onroad_time_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/gauge_5"
+                android:drawableLeft="@mipmap/icon_clock"
+                android:text="停车计时"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_20" />
+            <LinearLayout
+                android:id="@+id/onroad_time_free_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/onroad_time_hint_tv"
+                android:layout_marginLeft="@dimen/gauge_5"
+                android:layout_marginTop="@dimen/gauge_10"
+                android:gravity="bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/onroad_time_free_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="免费计时："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16" />
+
+                <com.zhichen.parking.widget.TimeProcessBar
+                    android:id="@+id/onroad_time_free_timecount"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    zc:barHeight="@dimen/gauge_3"
+                    zc:paddingLeft="@dimen/gauge_5"
+                    zc:paddingRight="@dimen/gauge_5"
+                    zc:pos="0"
+                    zc:textSize="@dimen/text_12" />
+
+                <TextView
+                    android:id="@+id/onroad_time_free_end_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15分钟"
+                    android:textColor="@color/color_text_60"
+                    android:textSize="@dimen/text_14" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@id/onroad_time_free_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gauge_5"
+                android:layout_marginTop="@dimen/gauge_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/onroad_time_pay_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="计费计时："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_16" />
+                <TextView
+                    android:id="@+id/onroad_time_hour_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gauge_3"
+                    android:padding="@dimen/gauge_5"
+                    android:background="@drawable/shape_text_blue"
+                    android:textSize="@dimen/text_26"
+                    android:textColor="@color/black"
+                    android:text="00:05:00"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--应付停车费模块-->
+        <RelativeLayout
+            android:layout_marginTop="@dimen/gauge_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/gauge_5"
+            android:background="@drawable/shape_white_bg">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/gauge_5"
+                android:drawableLeft="@mipmap/icon_clock"
+                android:text="应付停车费"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_20" />
+            <TextView
+                android:id="@+id/onroad_money_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gauge_260"
+                android:textSize="@dimen/text_20"
+                android:textColor="@color/money_red"
+                android:text="00.0元"/>
+            <LinearLayout
+                android:layout_below="@id/onroad_money_num_tv"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(账户余额："/>
+                <TextView
+                    android:id="@+id/onroad_account_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00.0"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="元)"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/onroad_page_hint_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gauge_10"
+            android:text="@string/onroad_page_hint"
+            android:textColor="@color/color_text_60"
+            android:textSize="@dimen/text_14" />
+    </LinearLayout>
+
+
+</LinearLayout>

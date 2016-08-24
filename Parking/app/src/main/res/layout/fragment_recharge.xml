@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aokente="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+    <com.zhichen.parking.widget.GlobalTitleLayout
+        android:id="@+id/title_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        aokente:global_back="true"
+        aokente:global_title="@string/recharge"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gauge_40"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/gauge_10"
+        android:text="请输入充值金额(元)"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gauge_70"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/recharge_custom_money_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gauge_48"
+            android:background="@drawable/selector_edittext_bg"
+            android:hint="请输入充值金额"
+            android:inputType="numberDecimal"
+            android:layout_marginLeft="@dimen/gauge_10"
+            android:layout_marginRight="@dimen/gauge_10"
+            android:paddingLeft="@dimen/gauge_10"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gauge_40"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/gauge_10"
+        android:text="请选择充值方式"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_18" />
+    <RelativeLayout
+        android:id="@+id/rl_alipay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gauge_48"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/gauge_20">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/pay_alipay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/gauge_20"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/gauge_20"
+            android:text="@string/alipay"
+            android:textColor="@color/black"
+            android:textSize="@dimen/gauge_16" />
+
+        <ImageView
+           style="@style/arrows" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_wechat"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gauge_48"
+        android:layout_marginTop="@dimen/gauge_1"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/gauge_20">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/pay_wechat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/gauge_20"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/gauge_20"
+            android:text="@string/weixin"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            style="@style/arrows" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bank"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gauge_48"
+        android:layout_marginTop="@dimen/gauge_1"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/gauge_20">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/pay_bank" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/gauge_20"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/gauge_20"
+            android:text="@string/bank"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <ImageView
+            style="@style/arrows" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/recharge_ok_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gauge_10"
+        android:layout_marginRight="@dimen/gauge_10"
+        android:layout_marginTop="@dimen/gauge_30"
+        android:background="@drawable/shape_button"
+        android:text="充值"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_18" />
+</LinearLayout>

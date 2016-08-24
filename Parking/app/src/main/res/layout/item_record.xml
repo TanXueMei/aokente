@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/gauge_3"
+    android:paddingTop="@dimen/gauge_10">
+
+    <ImageView
+        android:id="@+id/green"
+        android:layout_width="@dimen/gauge_36"
+        android:layout_height="@dimen/gauge_36"
+        android:src="@mipmap/green" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gauge_10"
+        android:layout_toRightOf="@id/green"
+        android:paddingLeft="@dimen/gauge_3"
+        android:text="高新南七道地下停车场"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/enter_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gauge_3"
+        android:layout_marginTop="@dimen/gauge_36"
+        android:layout_toRightOf="@id/green"
+        android:text="驶入:2016-5-26    07:32"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/comeOut_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gauge_3"
+        android:layout_marginTop="@dimen/gauge_58"
+        android:layout_toRightOf="@id/green"
+        android:text="驶出:2016-5-26    10:39"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/right"
+        style="@style/arrows" />
+    <TextView
+        android:id="@+id/yuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/gauge_6"
+        android:layout_toLeftOf="@id/right"
+        android:text="元" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/yuan"
+        android:text="60.00"
+        android:textColor="@color/seletorYellow" />
+    <TextView
+        android:id="@+id/data_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/yuan"
+        android:layout_marginTop="@dimen/gauge_58"
+        android:layout_toLeftOf="@id/comeOut_time"
+        android:text="停车场 | 微信" />
+</RelativeLayout>

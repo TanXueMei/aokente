@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--底部Tab-->
+    <style name="mainTabStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+    <!--Activity跳转动画（设置为从左边退出，右边进入）-->
+    <style name="default_animation" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <!-- A跳转到B进入动画-->
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_right</item>
+        <!--A跳转到B退出动画 -->
+        <item name="android:activityOpenExitAnimation">@anim/out_to_left</item>
+        <!--B跳转到A进入动画 -->
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_left</item>
+        <!--B跳转到A退出动画 -->
+        <item name="android:activityCloseExitAnimation">@anim/out_to_right</item>
+    </style>
+
+    <!-- 水平分割线 -->
+    <style name="HorizontalDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/gauge_1</item>
+        <item name="android:background">@color/gray</item>
+    </style>
+
+    <!-- 垂直分割线 -->
+    <style name="VerticalzontalDivider">
+        <item name="android:layout_width">@dimen/gauge_1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gray</item>
+    </style>
+    <!-- 长条蓝底白字圆角按钮 -->
+    <style name="long_item_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/gauge_48</item>
+        <item name="android:background">@drawable/shape_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="BaseButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/shape_button</item>
+        <item name="android:textSize">@dimen/text_18</item>
+    </style>
+    <!--文字样式 -->
+    <style name="about_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_18</item>
+    </style>
+    <!--停车缴费中的  缴费信息-->
+    <style name="pay_TextView_left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/gauge_5</item>
+        <item name="android:layout_marginTop">@dimen/gauge_4</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+
+    <!-- 自动乱播图banner -->
+    <style name="BannerDefaultStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/gauge_165</item>
+        <item name="android:layout_marginTop">@dimen/gauge_1</item>
+        <!-- 自定义属性在styles.xml中不需要命名空间,直接用属性名就可以了 -->
+        <!-- 开启自动轮播 -->
+        <item name="banner_pointAutoPlayAble">true</item>
+        <!-- 自动轮播的时间间隔 -->
+        <item name="banner_pointAutoPlayInterval">3000</item>
+        <!-- 指示点容器背景 -->
+        <item name="banner_pointContainerBackground">#44aaaaaa</item>
+        <!-- 指示点背景 -->
+        <item name="banner_pointDrawable">@drawable/selector_banner_point1</item>
+        <!-- 指示点容器左右内间距 -->
+        <item name="banner_pointContainerLeftRightPadding">@dimen/gauge_12</item>
+        <!-- 指示点上下外间距 -->
+        <item name="banner_pointTopBottomMargin">@dimen/gauge_15</item>
+        <!-- 指示点左右外间距 -->
+        <item name="banner_pointLeftRightMargin">@dimen/gauge_3</item>
+        <!-- 指示点的位置 -->
+        <item name="banner_pointGravity">bottom|center_horizontal</item>
+        <!-- 页码切换过程的时间长度 -->
+        <item name="banner_pageChangeDuration">800</item>
+        <!-- 提示文案的文字大小 -->
+        <item name="banner_tipTextSize">@dimen/text_10</item>
+        <!-- 提示文案的文字颜色 -->
+        <item name="banner_tipTextColor">@android:color/white</item>
+    </style>
+
+    <style name="GridPasswordView" />
+
+    <style name="GridPasswordView.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="GridPasswordView.EditText" parent="GridPasswordView.TextView">
+        <item name="android:cursorVisible">false</item>
+    </style>
+    <!--网格输入-->
+    <style name="GridPasswordView.Divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+    </style>
+
+    <!-- 信息填写 -->
+    <style name="IconEditTextLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/gauge_50</item>
+        <item name="android:layout_marginTop">@dimen/gauge_5</item>
+        <item name="com.zhichen.parking:textSize">@dimen/text_16</item>
+    </style>
+    <!--前进箭头-->
+    <style name="arrows">
+        <item name="android:layout_width">@dimen/gauge_18</item>
+        <item name="android:layout_height">@dimen/gauge_18</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/gauge_12</item>
+        <item name="android:src">@mipmap/arrows</item>
+    </style>
+
+</resources>

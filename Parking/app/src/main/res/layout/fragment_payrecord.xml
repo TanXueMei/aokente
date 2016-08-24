@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <com.zhichen.parking.widget.GlobalTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:global_back="true"
+        app:global_title="@string/pay_record" />
+
+    <com.zhichen.parking.library.refreshlayout.RefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe_container"
+        android:orientation="vertical">
+        <ListView
+            android:id="@+id/pay_record_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.zhichen.parking.library.refreshlayout.RefreshLayout>
+
+</LinearLayout>

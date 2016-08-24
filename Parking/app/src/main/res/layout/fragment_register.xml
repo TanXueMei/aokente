@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:zc="http://schemas.android.com/apk/res-auto"
+    android:background="#f0f0f0">
+    <RelativeLayout
+        android:id="@+id/register_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gauge_48"
+        android:background="@color/titleColor"
+        android:paddingLeft="@dimen/gauge_12">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="40dp"
+            android:src="@mipmap/back" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="@string/register"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/sliding_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_title"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/gauge_8"
+        android:layout_marginTop="@dimen/gauge_3"
+        android:paddingTop="@dimen/gauge_8" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1.手机和车牌号码"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2.验证码"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/tab_mima_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="3.密码设置"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14" />
+    </LinearLayout>
+
+    <com.zhichen.parking.widget.SlidingUnderline
+        android:id="@+id/sliding_underline"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/sliding_tab_layout"
+        android:layout_marginTop="-3dp"
+        zc:pos="0"
+        zc:total="3" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sliding_tab_layout"
+        android:padding="@dimen/gauge_20" >
+
+        <include
+            android:id="@+id/fragment_register_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/lable_register_1" />
+
+        <include
+            android:id="@+id/fragment_register_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/lable_register_2"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/fragment_register_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/lable_register_3"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

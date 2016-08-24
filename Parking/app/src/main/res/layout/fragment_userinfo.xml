@@ -1,0 +1,132 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aokente="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/gauge_10"
+        android:orientation="vertical">
+
+        <com.zhichen.parking.widget.GlobalTitleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            aokente:global_back="true"
+            aokente:global_title="@string/userInfo"/>
+        <!-- 头像 -->
+
+        <RelativeLayout
+            android:id="@+id/person_head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gauge_80"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/gauge_12">
+
+            <ImageView
+                android:id="@+id/user_more_1_iv"
+                style="@style/arrows" />
+            <FrameLayout
+                android:layout_width="@dimen/gauge_74"
+                android:layout_height="@dimen/gauge_74"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/gauge_10"
+                android:layout_toLeftOf="@id/user_more_1_iv">
+
+                <ImageView
+                    android:id="@+id/user_photo_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/user_head_bg" />
+
+                <com.zhichen.parking.widget.CircularImage
+                    android:id="@+id/user_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/user_head_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="头像"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_14" />
+        </RelativeLayout>
+
+        <View style="@style/HorizontalDivider" />
+        <!-- 昵称 -->
+
+        <RelativeLayout
+            android:id="@+id/person_nickname_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gauge_40"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/gauge_12"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/user_more_2_iv"
+                style="@style/arrows" />
+            <TextView
+                android:id="@+id/nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/gauge_10"
+                android:layout_toLeftOf="@id/user_more_2_iv"
+                android:text=""
+                android:textColor="@color/color_text_60"
+                android:textSize="@dimen/text_14" />
+
+            <TextView
+                android:id="@+id/nick_name_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="昵称"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_14" />
+        </RelativeLayout>
+
+        <View style="@style/HorizontalDivider" />
+
+        <!-- 手机 -->
+        <RelativeLayout
+            android:id="@+id/person_phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gauge_40"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/gauge_12">
+            <ImageView
+                android:id="@+id/user_more_3_iv"
+                style="@style/arrows" />
+            <TextView
+                android:id="@+id/user_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/gauge_10"
+                android:layout_toLeftOf="@id/user_more_3_iv"
+                android:text=""
+                android:textColor="@color/color_text_60"
+                android:textSize="@dimen/text_14" />
+
+            <TextView
+                android:id="@+id/user_phone_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="手机号码"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_14" />
+        </RelativeLayout>
+
+        <View style="@style/HorizontalDivider" />
+    </LinearLayout>
+
+</ScrollView>

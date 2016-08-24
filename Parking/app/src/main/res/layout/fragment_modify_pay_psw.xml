@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:aokente="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+ <com.zhichen.parking.widget.GlobalTitleLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     aokente:global_title="@string/change_paypsw"
+     aokente:global_back="true">
+ </com.zhichen.parking.widget.GlobalTitleLayout>
+
+    <com.zhichen.parking.widget.IconEditTextLayout
+        android:id="@+id/modify_pay_password_1_et"
+        style="@style/IconEditTextLayout"
+        android:layout_marginLeft="@dimen/gauge_20"
+        android:layout_marginRight="@dimen/gauge_20"
+        android:layout_marginTop="@dimen/gauge_10"
+        zc:hint="请输入原支付密码"
+        zc:icon="@mipmap/icon_pay_password"
+        zc:password="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gauge_10"
+        android:layout_marginBottom="@dimen/gauge_10"
+        android:layout_marginLeft="@dimen/gauge_20"
+        android:layout_marginRight="@dimen/gauge_20"
+        android:text="若这是您首次设置支付密码，请忽略该项"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_14" />
+
+    <com.zhichen.parking.widget.IconEditTextLayout
+        android:id="@+id/modify_pay_password_2_et"
+        style="@style/IconEditTextLayout"
+        android:layout_marginLeft="@dimen/gauge_20"
+        android:layout_marginRight="@dimen/gauge_20"
+        zc:hint="请设置新的支付密码"
+        zc:icon="@mipmap/icon_pay_password"
+        zc:password="true" />
+
+    <com.zhichen.parking.widget.IconEditTextLayout
+        android:id="@+id/modify_pay_password_3_et"
+        style="@style/IconEditTextLayout"
+        android:layout_marginLeft="@dimen/gauge_20"
+        android:layout_marginRight="@dimen/gauge_20"
+        zc:hint="请再次输入新的支付密码"
+        zc:icon="@mipmap/icon_pay_password"
+        zc:password="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gauge_10"
+        android:layout_marginLeft="@dimen/gauge_20"
+        android:layout_marginRight="@dimen/gauge_20"
+        android:text="支付密码为六位纯数字"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_14" />
+
+    <Button
+        android:id="@+id/modify_pay_submit_btn"
+        style="@style/long_item_btn"
+        android:layout_marginLeft="@dimen/gauge_20"
+        android:layout_marginRight="@dimen/gauge_20"
+        android:layout_marginTop="30dp"
+        android:text="@string/finish" />
+
+</LinearLayout>

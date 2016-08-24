@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/gauge_8"
+    android:paddingTop="@dimen/gauge_8" >
+
+    <TextView
+        android:id="@+id/parkinglot_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/gauge_8"
+        android:textColor="@color/gray_holo_dark"
+        android:textSize="@dimen/text_18" />
+    <ImageView
+        android:id="@+id/parkinglot_more_iv"
+        style="@style/arrows" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/parkinglot_more_iv"
+        android:gravity="center"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/parkinglot_available_hint_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="空余车位"
+            android:textColor="@color/gray_holo_dark"
+            android:textSize="@dimen/text_16" />
+
+        <TextView
+            android:id="@+id/parkinglot_available_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/money_red"
+            android:textSize="@dimen/text_16" />
+    </LinearLayout>
+
+</RelativeLayout>

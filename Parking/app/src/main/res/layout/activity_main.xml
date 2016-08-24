@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backdrop"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fragmeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/gauge_1"-->
+    <!--android:background="@color/gray" />-->
+
+    <!-- -->
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-16dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/gauge_6">
+        <RadioButton
+            android:id="@+id/homePage"
+            style="@style/mainTabStyle"
+            android:drawableTop="@drawable/homepage_tab_seletor" />
+        <RadioButton
+            android:id="@+id/record"
+            style="@style/mainTabStyle"
+            android:drawableTop="@drawable/record_tab_seletor" />
+        <RadioButton
+            android:id="@+id/around"
+            style="@style/mainTabStyle"
+            android:drawableTop="@drawable/around_tab_seletor" />
+        <RadioButton
+            android:id="@+id/profile"
+            style="@style/mainTabStyle"
+            android:drawableTop="@drawable/profile_tab_seletor" />
+    </RadioGroup>
+</LinearLayout>

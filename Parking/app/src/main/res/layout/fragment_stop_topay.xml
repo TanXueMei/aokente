@@ -1,0 +1,36 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:aokente="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+       <com.zhichen.parking.widget.GlobalTitleLayout
+           android:id="@+id/pay_title"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           aokente:global_title="@string/stop_topay"
+           aokente:global_back="true">
+       </com.zhichen.parking.widget.GlobalTitleLayout>
+        <include
+            android:id="@+id/pay_fragment_1_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/gauge_10"
+            android:layout_marginRight="@dimen/gauge_10"
+            android:layout_marginTop="@dimen/gauge_10"
+            layout="@layout/lable_pay_1" />
+
+        <include
+            android:id="@+id/pay_common_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/lable_pay_common" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,75 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4A4A4A"
+    android:fillViewport="true"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gauge_10"
+            android:text="如果领取过商家折扣，付款时会自动抵用"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/gauge_15"
+            android:background="@drawable/shape_white_bg" >
+
+            <ImageView
+                android:id="@+id/pay_card_no_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gauge_80"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/gauge_15"
+                android:layout_marginRight="@dimen/gauge_15"
+                android:layout_marginTop="@dimen/gauge_15"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/pay_card_code" />
+
+            <TextView
+                android:id="@+id/pay_card_no_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pay_card_no_iv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/gauge_5"
+                android:text="2015 5421 5848 456321"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16" />
+
+            <ImageView
+                android:id="@+id/pay_qrcode_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gauge_200"
+                android:layout_below="@id/pay_card_no_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/gauge_10"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/pay_qrcode" />
+
+            <TextView
+                android:id="@+id/pay_qrcode_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pay_qrcode_iv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/gauge_10"
+                android:layout_marginTop="@dimen/gauge_10"
+                android:drawableLeft="@mipmap/icon_park_road"
+                android:text="每分钟自动刷新"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:aokente="http://schemas.android.com/apk/res-auto">
+
+    <com.zhichen.parking.widget.GlobalTitleLayout
+        android:id="@+id/my_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        aokente:global_title="@string/about_mine"
+        aokente:global_back="true">
+    </com.zhichen.parking.widget.GlobalTitleLayout>
+    <TextView
+        android:layout_below="@id/my_title"
+        android:id="@+id/about_app_tv"
+        style="@style/about_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/gauge_30"
+        android:text="@string/app_name" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_app_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/gauge_10"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/about_version_hint_tv"
+            style="@style/about_text"
+            android:text="版本号：" />
+
+        <TextView
+            android:id="@+id/about_version_tv"
+            style="@style/about_text"
+            android:text="V1.0.1" />
+    </LinearLayout>
+   <!--<ImageView-->
+       <!--android:layout_width="match_parent"-->
+       <!--android:layout_height="wrap_content"-->
+       <!--android:layout_centerInParent="true"-->
+       <!--android:src="@drawable/about_bg"/>-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/app_logo"/>
+
+    <TextView
+        android:id="@+id/about_copyright_tv"
+        style="@style/about_text"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/gauge_10"
+        android:text="@string/copyright_1"
+        android:textSize="@dimen/text_10" />
+
+    <TextView
+        android:id="@+id/about_copyright_simple_tv"
+        style="@style/about_text"
+        android:layout_above="@id/about_copyright_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/gauge_10"
+        android:textSize="@dimen/text_10"
+        android:text="@string/copyright_2" />
+
+</RelativeLayout>

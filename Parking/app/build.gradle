@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+//Android 6.0权限问题
+apply plugin: 'com.neenbedankt.android-apt'
+android {
+    signingConfigs {
+        config {
+            keyAlias 'aokente'
+            keyPassword 'aokente_ac415'
+            storeFile file('../key/store.jks')
+            storePassword 'aokente_ac415'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+    useLibrary 'org.apache.http.legacy'
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/MANIFEST.txt'
+    }
+    defaultConfig {
+        applicationId "com.zhichen.parking"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 2016081601
+        versionName "1.0.1"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+//        debug{
+//            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+
+    }
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'org.xutils:xutils:3.3.4'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile files('libs/android-logging-log4j-1.0.3.jar')
+    compile files('libs/log4j-1.2.17.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/lite-http-2.2.0.jar')
+    compile files('libs/baidumapapi_v3_4_0.jar')
+    compile files('libs/locSDK_5.0.jar')
+    compile files('libs/alipaySdk-20160223.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/UPPayAssistEx.jar')
+    compile files('libs/UPPayPluginExPro.jar')
+    //Android 6.0权限问题
+    apt 'com.zhy:mpermission-compiler:1.0.0'
+    compile 'com.zhy:mpermission-api:1.0.0'
+    compile files('libs/universal-image-loader-1.9.3.jar')
+}

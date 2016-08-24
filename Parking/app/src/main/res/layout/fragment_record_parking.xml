@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aokente="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--自定义标题栏-->
+    <com.zhichen.parking.widget.GlobalTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        aokente:global_back="true"
+        aokente:global_title="@string/park_record" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEEEE"
+        android:text="已完成订单"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gauge_10"
+        android:layout_marginRight="@dimen/gauge_10"
+        android:layout_marginTop="@dimen/gauge_3">
+
+        <Button
+            android:id="@+id/pay_car_change_btn"
+            style="@style/BaseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/gauge_30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:minWidth="@dimen/gauge_80"
+            android:text="修改"
+            android:textSize="@dimen/text_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/gauge_15"
+            android:layout_toLeftOf="@id/pay_car_change_btn"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/gauge_10"
+                android:text="当前车辆"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18" />
+
+            <TextView
+                android:id="@+id/pay_car_no_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_text_blue"
+                android:paddingLeft="@dimen/gauge_4"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18" />
+        </LinearLayout>
+    </RelativeLayout>
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/gauge_1"
+       android:layout_marginTop="@dimen/gauge_6"
+       android:background="@color/gray"/>
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gauge_30"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/in_record"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/seletor_record"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="进场记录"
+            android:textColor="@color/color_text_record" />
+
+        <RadioButton
+            android:id="@+id/out_ecord"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/seletor_record"
+            android:button="@null"
+            android:gravity="center"
+            android:text="出场记录"
+            android:textColor="@color/mm_btn_text" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gauge_1"
+        android:background="#d8d6d6" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/record_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/gauge_80"
+            android:layout_height="@dimen/gauge_80"
+            android:src="@mipmap/my_park" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前无记录"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

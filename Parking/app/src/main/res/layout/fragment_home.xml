@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aokente="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:zc="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <!--自定义标题栏-->
+    <com.zhichen.parking.widget.GlobalTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        aokente:global_back="false"
+        aokente:global_title="@string/app_name"/>
+
+    <!--<com.act.aokente.pwhere.widget.flashview.FlashView-->
+        <!--android:id="@+id/fashview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/gauge_171"></com.act.aokente.pwhere.widget.flashview.FlashView>-->
+     <com.zhichen.parking.library.bgabanner.BGABanner
+         android:id="@+id/banner"
+         style="@style/BannerDefaultStyle"
+         zc:banner_pointAutoPlayAble="true"
+         zc:banner_pointTopBottomMargin="15dp"
+         zc:banner_transitionEffect="defaultEffect">
+     </com.zhichen.parking.library.bgabanner.BGABanner>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gauge_20"
+        android:paddingLeft="@dimen/gauge_12"
+        android:paddingRight="@dimen/gauge_12"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_findPark"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/home_park"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tv_toPark"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/home_cart"
+            android:layout_marginLeft="@dimen/gauge_15"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_toPay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gauge_48"
+        android:layout_marginTop="@dimen/gauge_10"
+        android:background="#178504"
+        android:text="@string/pay_park"
+        android:textSize="@dimen/text_18"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/banner_bottom" />
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_bg"
+    android:padding="@dimen/gauge_5" >
+
+    <Button
+        android:id="@+id/pay_submit_btn"
+        style="@style/BaseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/gauge_30"
+        android:text="立即支付"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:enabled="false"
+        android:minWidth="@dimen/gauge_100" />
+
+    <TextView android:id="@+id/pay_total_money_hint_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="合计："
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_18" />
+
+    <TextView android:id="@+id/pay_total_money_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/pay_total_money_hint_tv"
+        android:text="0.00"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_16" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/gauge_4"
+        android:layout_toRightOf="@id/pay_total_money_tv"
+        android:text="元"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_16" />
+
+</RelativeLayout>

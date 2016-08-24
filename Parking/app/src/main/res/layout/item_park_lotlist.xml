@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/gauge_12">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/gauge_6"
+        android:text="高新南七道地下停车场"
+        android:textColor="#606062"
+        android:textSize="@dimen/gauge_18" />
+
+    <LinearLayout
+        android:id="@+id/ll_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title">
+
+        <ImageView
+            android:id="@+id/green"
+            android:layout_width="@dimen/gauge_36"
+            android:layout_height="@dimen/gauge_36"
+            android:layout_marginTop="@dimen/gauge_3"
+            android:src="@mipmap/green" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/gauge_10"
+            android:text="222"
+            android:textColor="#606062"
+            android:textSize="@dimen/text_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_distance"
+        android:layout_marginTop="@dimen/gauge_6">
+
+        <ImageView
+            android:id="@+id/icon_totle"
+            android:layout_width="@dimen/gauge_30"
+            android:layout_height="@dimen/gauge_30"
+            android:layout_marginTop="@dimen/gauge_6"
+            android:src="@mipmap/park_totle" />
+
+        <TextView
+            android:id="@+id/tv_totleParkLot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/gauge_3"
+            android:text="总车位：300"
+            android:textColor="#606062"
+            android:textSize="@dimen/text_16" />
+
+        <ImageView
+            android:id="@+id/icon_empty"
+            android:layout_width="@dimen/gauge_30"
+            android:layout_height="@dimen/gauge_30"
+            android:layout_below="@id/distance"
+            android:layout_marginLeft="@dimen/gauge_46"
+            android:layout_marginTop="@dimen/gauge_6"
+            android:src="@mipmap/park_empty" />
+
+        <TextView
+            android:id="@+id/tv_emptyPark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/gauge_3"
+            android:text="空车位：300"
+            android:textColor="#606062"
+            android:textSize="@dimen/text_16" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/in"
+        style="@style/arrows" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/gauge_25"
+        android:layout_toLeftOf="@id/in"
+        android:text="详情"
+        android:textColor="@color/seletorYellow"
+        android:textSize="@dimen/gauge_18" />
+
+    <View
+        android:layout_width="@dimen/gauge_80"
+        android:layout_height="@dimen/gauge_2"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ll_two"
+        android:background="#C2C2C2" />
+</RelativeLayout>

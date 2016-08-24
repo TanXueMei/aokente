@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <stroke android:width="@dimen/gauge_1" android:color="@color/titleColor" />
+
+    <!-- 实心 -->
+    <solid android:color="@color/transparent" />
+
+    <!-- 圆角 -->
+    <corners android:radius="@dimen/gauge_4" />
+</shape>

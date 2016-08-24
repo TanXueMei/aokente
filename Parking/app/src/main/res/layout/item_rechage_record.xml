@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:layout_marginTop="@dimen/gauge_6"
+        android:paddingLeft="@dimen/gauge_12"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值方式："
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16" />
+        <TextView
+            android:id="@+id/tv_carnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_holo_dark"
+            android:textSize="@dimen/text_16" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:layout_marginTop="@dimen/gauge_6"
+        android:paddingLeft="@dimen/gauge_12"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值金额："
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16" />
+        <TextView
+            android:id="@+id/rechage_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_holo_dark"
+            android:textSize="@dimen/text_16" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:layout_marginTop="@dimen/gauge_6"
+        android:paddingLeft="@dimen/gauge_12"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值时间："
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16" />
+        <TextView
+            android:id="@+id/rechage_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_holo_dark"
+            android:textSize="@dimen/text_16" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhichen.parking.widget.MarqueeTextView
+        android:id="@+id/parking_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gauge_10"
+        android:layout_marginTop="@dimen/gauge_10"
+        android:textColor="#606062"
+        android:textSize="@dimen/text_20" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gauge_10"
+        android:layout_marginRight="@dimen/gauge_10">
+       <ImageView
+           android:id="@+id/iv_greenn"
+           android:layout_width="@dimen/gauge_30"
+           android:layout_height="@dimen/gauge_30"
+           android:layout_marginTop="@dimen/gauge_10"
+           android:src="@mipmap/green"/>
+        <TextView
+            android:id="@+id/parking_distance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gauge_14"
+            android:layout_toRightOf="@id/iv_greenn"
+            android:gravity="center_vertical"
+            android:text="距离0米"
+            android:textColor="#606062"
+            android:textSize="@dimen/text_18" />
+
+        <ImageView
+            android:id="@+id/iv_arrows"
+            android:layout_width="@dimen/gauge_18"
+            android:layout_height="@dimen/gauge_20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrows_yellow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/gauge_20"
+            android:layout_toLeftOf="@id/iv_arrows"
+            android:text="详情"
+            android:textColor="@color/seletorYellow"
+            android:textSize="@dimen/text_20" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gauge_30"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/gauge_10"
+        android:layout_marginLeft="@dimen/gauge_10"
+        android:layout_marginTop="@dimen/gauge_10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/gauge_30"
+                android:layout_height="@dimen/gauge_30"
+                android:src="@mipmap/park_empty" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="空车位："
+                android:textColor="#606062"
+                android:textSize="@dimen/text_18" />
+            <TextView
+                android:id="@+id/parking_available_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="0"
+                android:textColor="#606062"
+                android:textSize="@dimen/text_18" />
+        </LinearLayout>
+
+        <View
+            style="@style/VerticalzontalDivider"
+            android:layout_marginBottom="@dimen/gauge_5"
+            android:layout_marginTop="@dimen/gauge_5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/gauge_30"
+                android:layout_height="@dimen/gauge_30"
+                android:src="@mipmap/park_totle" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="总车位："
+                android:textColor="#606062"
+                android:textSize="@dimen/text_18" />
+            <TextView
+                android:id="@+id/parking_total_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="0"
+                android:textColor="#606062"
+                android:textSize="@dimen/text_18" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

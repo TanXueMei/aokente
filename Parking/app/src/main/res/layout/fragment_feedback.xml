@@ -1,0 +1,69 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aokente="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/gauge_10"
+        android:orientation="vertical" >
+        <com.zhichen.parking.widget.GlobalTitleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            aokente:global_back="true"
+            aokente:global_title="@string/feed_back">
+        </com.zhichen.parking.widget.GlobalTitleLayout>
+        <EditText android:id="@+id/suggest_input_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gauge_200"
+            android:paddingLeft="@dimen/gauge_5"
+            android:layout_marginTop="@dimen/gauge_10"
+            android:layout_marginLeft="@dimen/gauge_12"
+            android:layout_marginRight="@dimen/gauge_12"
+            android:background="@drawable/selector_edittext_bg"
+            android:gravity="top"
+            android:textSize="@dimen/text_16"
+            android:hint="请输入您的建议反馈（字数在100字以内）" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/gauge_12"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="100"
+                android:textSize="@dimen/gauge_12" />
+            <TextView
+                android:id="@+id/fen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/number"
+                android:textSize="@dimen/gauge_12"
+                android:text="/"/>
+            <TextView
+                android:id="@+id/textNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/fen"
+                android:textSize="@dimen/gauge_12"
+                android:text="0"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/long_item_btn"
+            android:layout_marginTop="@dimen/gauge_15"
+            android:layout_marginLeft="@dimen/gauge_12"
+            android:layout_marginRight="@dimen/gauge_12"
+            android:text="@string/submit" />
+    </LinearLayout>
+
+</ScrollView>

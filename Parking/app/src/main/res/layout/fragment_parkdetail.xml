@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aokente="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.zhichen.parking.widget.GlobalTitleLayout
+        android:id="@+id/title_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        aokente:global_back="true"
+        aokente:global_title="@string/parklotdetail" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/gauge_12"
+                android:paddingRight="@dimen/gauge_3"
+                android:paddingTop="@dimen/gauge_3">
+
+                <TextView
+                    android:id="@+id/tv_parklotName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="高新南七道地下停车场"
+                    android:textSize="@dimen/text_18"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/ll_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_parklotName"
+                    android:layout_marginTop="@dimen/gauge_10">
+
+                    <ImageView
+                        android:id="@+id/iv_green"
+                        android:layout_width="@dimen/gauge_36"
+                        android:layout_height="@dimen/gauge_36"
+                        android:src="@mipmap/green" />
+
+                    <TextView
+                        android:id="@+id/tv_deatil_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/gauge_4"
+                        android:text="428米"
+                        android:textSize="@dimen/text_16"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_lotadress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_name"
+                    android:layout_marginTop="@dimen/gauge_30"
+                    android:text="深圳市南山区高新南七道15号"
+                    android:textSize="@dimen/text_16"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_lotadress"
+                    android:layout_marginTop="@dimen/gauge_10">
+
+                    <ImageView
+                        android:id="@+id/iv_totle"
+                        android:layout_width="@dimen/gauge_30"
+                        android:layout_height="@dimen/gauge_30"
+                        android:src="@mipmap/park_totle" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_totle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/gauge_3"
+                        android:gravity="bottom"
+                        android:text="总车位：300"
+                        android:textSize="@dimen/text_16" />
+
+                    <ImageView
+                        android:id="@+id/iv_empty"
+                        android:layout_width="@dimen/gauge_30"
+                        android:layout_height="@dimen/gauge_30"
+                        android:layout_marginLeft="@dimen/gauge_25"
+                        android:src="@mipmap/park_empty" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_empty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/gauge_3"
+                        android:layout_marginTop="@dimen/gauge_8"
+                        android:gravity="bottom"
+                        android:text="空车位：230"
+                        android:textSize="@dimen/text_16" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/gauge_120"
+                    android:layout_height="@dimen/gauge_100"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/park_details" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gauge_36"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/gauge_10"
+                android:paddingLeft="@dimen/gauge_12"
+                android:paddingRight="@dimen/gauge_12">
+
+                <ImageView
+                    android:id="@+id/iv_dollar"
+                    android:layout_width="@dimen/gauge_50"
+                    android:layout_height="@dimen/gauge_70"
+                    android:layout_marginLeft="@dimen/gauge_10"
+                    android:src="@mipmap/dollar" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/gauge_50"
+                    android:layout_toRightOf="@id/iv_dollar"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="白天：2元/小时(08:00-20:00)"
+                        android:textSize="@dimen/text_16" />
+
+                    <TextView
+                        android:id="@+id/tv_night"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gauge_10"
+                        android:text="晚上：1元/小时(20:00-08:00)"
+                        android:textSize="@dimen/text_16" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gauge_160"
+                android:layout_marginTop="@dimen/gauge_10"
+                android:background="@mipmap/park_detail_ad" />
+
+            <TextView
+                android:id="@+id/tv_detail_go"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gauge_40"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/gauge_10"
+                android:layout_marginRight="@dimen/gauge_10"
+                android:layout_marginTop="@dimen/gauge_20"
+                android:background="@drawable/shape_button"
+                android:gravity="center"
+                android:text="导航"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

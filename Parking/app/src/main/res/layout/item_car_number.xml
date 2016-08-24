@@ -1,0 +1,56 @@
+<com.zhichen.parking.library.damajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/car_swipelayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/gauge_100">
+
+    <LinearLayout
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="@dimen/gauge_100"
+        android:layout_height="match_parent"
+        android:background="@color/color_text_60"
+        android:gravity="right|center_vertical"
+        android:weightSum="1" >
+
+        <Button android:id="@+id/car_delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/gauge_30"
+            android:layout_marginRight="@dimen/gauge_10"
+            android:background="@drawable/shape_button_origin"
+            android:text="删除"
+            android:textSize="@dimen/text_16" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/gauge_20"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@mipmap/cars_manage">
+            <TextView
+                android:id="@+id/car_no_show_tv"
+                android:layout_width="@dimen/gauge_160"
+                android:layout_height="@dimen/gauge_38"
+                android:gravity="center"
+                android:background="@color/cartNumColor"
+                android:text="陕A256432"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_30" />
+        </RelativeLayout>
+
+        <ImageView
+            style="@style/arrows" />
+
+        <View
+            style="@style/HorizontalDivider"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+</com.zhichen.parking.library.damajia.swipe.SwipeLayout>

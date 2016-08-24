@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/go_search_btn"
+        android:layout_width="@dimen/gauge_50"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_button"
+        android:text="搜索"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_14" />
+
+    <EditText
+        android:id="@+id/search_et_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/go_search_btn"
+        android:background="@drawable/selector_edittext_bg"
+        android:drawableLeft="@mipmap/search_icon"
+        android:paddingLeft="5dp"
+        android:drawablePadding="3dp"
+        android:hint="请输入关键字"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:textSize="@dimen/text_14" />
+
+    <ImageView
+        android:id="@+id/search_iv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@id/search_et_input"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/seletor_delete_bg"
+        android:visibility="gone" />
+
+</RelativeLayout>

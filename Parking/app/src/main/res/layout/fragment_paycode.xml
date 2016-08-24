@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aokente="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhichen.parking.widget.GlobalTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        aokente:global_back="true"
+        aokente:global_title="@string/pay_code">
+    </com.zhichen.parking.widget.GlobalTitleLayout>
+
+
+    <include
+        android:id="@+id/pay_code"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/lable_pay_code" />
+
+</LinearLayout>
